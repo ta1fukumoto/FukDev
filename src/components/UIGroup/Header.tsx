@@ -21,12 +21,12 @@ const Header: React.VFC = () => {
               </Link>
               <Link href="/zenn">
                 <a>
-                  <Image src="/zenn/zenn.svg" width={80} height={64} alt={"Zenn"} />
+                  <Image src="/zenn/Zenn.svg" width={80} height={64} alt={"Zenn"} />
                 </a>
               </Link>
               <Link href="/qiita">
                 <a>
-                  <Image src="/qiita/qiita.svg" width={80} height={64} alt={"Qiita"} />
+                  <Image src="/qiita/Qiita.svg" width={80} height={64} alt={"Qiita"} />
                 </a>
               </Link>
             </nav>
