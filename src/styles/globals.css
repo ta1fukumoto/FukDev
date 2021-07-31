@@ -4,17 +4,50 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体",
+    YuGothic, sans-serif;
+  @apply m-0 p-0 text-[#111] bg-[#FAF5EE];
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  @apply no-underline hover:text-[#444];
 }
 
 * {
-  box-sizing: border-box;
+  @apply box-border;
+}
+
+/* コンテンツのスタイリング */
+.znc h1 {
+  @apply font-bold pl-5 !pb-0 !border-b-0
+          before:absolute before:top-0 before:left-0 before:inline-block before:w-2 before:h-1/2 before:rounded-t-full before:bg-primary
+          after:absolute after:bottom-0 after:left-0 after:inline-block after:w-2 after:h-1/2 after:rounded-b-full after:bg-secondary;
+}
+
+.znc h2 {
+  @apply relative font-bold !pb-0 pl-6
+          before:absolute before:top-5 before:left-0 before:block before:w-5 before:h-5 before:rounded-full before:bg-secondary
+          after:absolute after:top-1 after:left-0 after:block after:w-5 after:h-5 after:rounded-full after:bg-primary;
+}
+
+.znc h3,
+.znc h4,
+.znc h5,
+.znc h6 {
+  @apply font-bold;
+}
+
+/* 目次のスタイリング */
+.toc_h1,
+.toc_h2 {
+  @apply flex mb-1 before:mr-1.5 before:content-['#'] before:text-gray-500;
+}
+
+.toc_h2 {
+  @apply ml-4;
+}
+
+.toc_h1 code,
+.toc_h2 code {
+  @apply text-sm p-1 bg-gray-100;
 }
